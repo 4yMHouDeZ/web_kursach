@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/simvolika.css">
+    <title>Document</title>
+    <script>
+        function playAudio(btn) {
+            var file = document.getElementById('gimn')
+            file.play()
+            btn.onclick = function() {stopAudio(btn)}
+        }
+        function stopAudio(btn) {
+            var file = document.getElementById('gimn')
+            file.pause()
+            btn.onclick = function() {playAudio(btn)}
+        }
+
+        function openMenu() {
+            document.querySelector('.menu_body').classList.add('active')
+            var btn = document.querySelector('.open__nav')
+            btn.classList.add('cross')
+            btn.onclick = function() { closeMenu() }
+        }
+        function closeMenu() {
+            document.querySelector('.menu_body').classList.remove('active')
+            var btn = document.querySelector('.open__nav')
+            btn.classList.remove('cross')
+            btn.onclick = function() { openMenu() }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="РосИст - История Российской Империи">
+        <nav>
+            <button onclick="openMenu()" class="open__nav cross">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </button>
+            <div class="menu_body">
+                <menu class="mobile_menu">
+                <ul>
+                    <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
+                    <li><button onclick="location.href = './sobitiya.html'">События</button></li>
+                    <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
+                    <li><button onclick="location.href = './info.html'">О нас</button></li>
+                    <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
+                </ul>
+            </menu>
+            </div>
+            
+            <ul class="nav">
+                <li><button onclick="location.href = './info.html'">О нас</button></li>
+                <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
+            </ul>
+            <ul class="nav">
+                <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
+                <li><button onclick="location.href = './sobitiya.html'">События</button></li>
+                <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul>
+            <li>
+                <label for="bashnya">Спасская башня - символ Москвы</label>
+                <img id="bashnya" src="images/bashnya.png" alt="Спасская башня">
+            </li>
+            <li>
+                <label for="clock">Ход курантов</label>
+                <video autoplay loop id="clock" src="videos/bashnya.mp4" alt="Часы на Спасской башне"></video>
+            </li>
+            <li>
+                <label for="flag">Флаг Российской империи</label>
+                <img id="flag" src="images/flag.png" alt="Флаг">
+            </li>
+            <li>
+                <label for="gerb">Герб Российской империи</label>
+                <img id="gerb" src="images/gerb.png" alt="Герб">
+            </li>
+            <li>
+                <label for="gimn">Гимн Российской империи</label>
+                <img class="audio" onclick="playAudio(this)" src="images/gimn.png" alt="Гимн Российской империи">
+                <audio id="gimn" src="audios/gimn.mp3"></audio>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy 25-ИСТ-1-2 Бербасов Сергей бульбуль. Сделано в 2025г.</p>
+    </footer>
+</body>
+</html>

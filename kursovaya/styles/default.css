@@ -1,0 +1,168 @@
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #fafafc;
+    width: 100%;
+    padding: 10px 0px;
+}
+footer {
+    font-family: 'Jura';
+    font-size: 16px;
+    background: #fafafc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav {
+    gap: 8px;
+    display: flex;
+    list-style: none;
+}
+.logo {
+    height: 70px;
+}
+main {
+    max-width: 1440px;
+}
+
+.open__nav {
+    display: none;
+}
+.mobile_menu {
+    display: none;
+}
+
+@media (min-width: 797px) {
+    nav button {
+        background: transparent;
+        border: 1px solid #999999;
+        border-radius: 30px;
+        padding: 7px 20px;
+        font-family: 'Jura';
+        color: #999999;
+        cursor: pointer;
+    }
+    nav button:hover {
+        background: #FF0033;
+        color: white;
+    }
+}
+
+@media (max-width: 796px) {
+    .nav {
+        display: none;
+    }
+    .logo {
+        height: 30px;
+    }
+    .open__nav {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10fr 0.1fr 10fr;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        z-index: 11;
+    }
+    .top {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        transition: all 0.5s;
+    }
+    .bottom {
+        grid-row: 3 / 3;
+        grid-column: 1 / 1;
+        transition: all 0.5s;
+    }
+    .open__nav div {
+        background: black;
+        width: 24px;
+        height: 2px;
+        border-radius: 10px;
+        transition: all 0.5s;
+    }
+    .open__nav.cross .bottom {
+        rotate: -45deg;
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+    }
+    .open__nav.cross .top {
+        rotate: 45deg;
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+    }
+    header {
+        justify-content: space-evenly;
+    }
+    .menu_body {
+        background-color: #fafafc;
+
+        position: fixed;
+        top: 0px;
+        left: 0px;
+
+        width: 100%;
+        height: 0px;
+        transition: all 1s;
+        z-index: 10;
+    }
+    .menu_body.active {
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .mobile_menu {
+        opacity: 0;
+        transition: opacity 1s;
+        margin: 0px;
+        padding: 0px;
+
+        display: flex;
+        flex-direction: column;
+    }
+    .menu_body.active .mobile_menu {
+        opacity: 1;
+    }
+
+    .mobile_menu ul {
+        padding: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+    ul button {
+        display: none;
+        width: 250px;
+        text-align: left;
+        background: transparent;
+        font-family: 'Jura';
+        font-size: 22px;
+        border: none;
+        padding: 20px 30px;
+        color: black;
+    }
+    .menu_body.active .mobile_menu ul button {
+        display: inline-block;
+    }
+}
