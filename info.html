@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/info.css">
+    <title>Document</title>
+    <script>
+        function openMenu() {
+            document.querySelector('.menu_body').classList.add('active')
+            var btn = document.querySelector('.open__nav')
+            btn.classList.add('cross')
+            btn.onclick = function() { closeMenu() }
+        }
+        function closeMenu() {
+            document.querySelector('.menu_body').classList.remove('active')
+            var btn = document.querySelector('.open__nav')
+            btn.classList.remove('cross')
+            btn.onclick = function() { openMenu() }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="РосИст - История Российской Империи">
+        <nav>
+            <button onclick="openMenu()" class="open__nav">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </button>
+            <div class="menu_body">
+                <menu class="mobile_menu">
+                <ul>
+                    <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
+                    <li><button onclick="location.href = './sobitiya.html'">События</button></li>
+                    <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
+                    <li><button onclick="location.href = './info.html'">О нас</button></li>
+                    <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
+                </ul>
+            </menu>
+            </div>
+            
+            <ul class="nav">
+                <li><button onclick="location.href = './info.html'">О нас</button></li>
+                <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
+            </ul>
+            <ul class="nav">
+                <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
+                <li><button onclick="location.href = './sobitiya.html'">События</button></li>
+                <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <address>
+            <div class="avatar">
+                <img onclick="window.location.href = 'https://steamcommunity.com/profiles/76561199075359232/'" class="frame" src="https://community.akamai.steamstatic.com/economy/image/a0b44yVZG6xneuQqGEgxNyzAxlmouy8Ipo0bUlJjRDfF9dQS1eD3AHU-t8xnioHyGdqSZpgsmMIM6FMFdgSVUq8-oVI22E8AzyuEOc3oQKCXp276-90AFafb4LTxjpW0-3QH3pMhO4gfcYbp4_SiAbPRYF0/96fx96f?allow_animated=1" alt="">
+                <img class="photo" src="images/omg.png" alt="Бербасов Сергей">
+            </div>
+            <p class="name">Выполнил: Бербасов Сергей</p>
+            <p class="group">Группа: 25-ИСТ-1-2</p>
+        </address>
+    </main>
+    <footer>
+        <p>&copy 25-ИСТ-1-2 Бербасов Сергей бульбуль. Сделано в 2025г.</p>
+    </footer>
+</body>
+</html>
