@@ -1,8 +1,7 @@
 img:not(.logo), video, audio {
     max-width: 100%;
     height: auto;
-    border-radius: 30px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
 }
 img#gerb {
     border-radius: 50%;
@@ -25,21 +24,14 @@ label {
 .audio:hover {
     filter:
         sepia(100%)
-        hue-rotate(150deg)
-        brightness(0.7);
+        hue-rotate(-50deg)
+        brightness(0.9);
     cursor: pointer;
     transition: filter 0.3s;
 }
 
-.content li {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
+li {
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
 }

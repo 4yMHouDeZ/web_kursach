@@ -52,48 +52,46 @@
 </head>
 <body>
     <header>
-        <div class="header__container">
-            <img onclick="location.href = './index.html'" class="logo" src="images/logo.png" alt="РосИст - История Российской Империи">
-            <nav>
-                <button onclick="openMenu()" class="open__nav">
-                    <div class="top"></div>
-                    <div class="bottom"></div>
-                </button>
-                <div class="menu_body">
-                    <menu class="mobile_menu">
-                        <ul class="top">
-                            <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
-                            <li><button onclick="location.href = './sobitiya.html'">События</button></li>
-                            <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
-                            <li><button onclick="location.href = './karta.html'">Карта</button></li>
-                        </ul>
-                        <ul class="bottom">
-                            <li><button onclick="location.href = './info.html'">О нас</button></li>
-                            <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
-                        </ul>
-                    </menu>
-                </div>
-                
-                <ul class="nav">
-                    <li><button onclick="location.href = './info.html'">О нас</button></li>
-                    <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
-                </ul>
-                <ul class="nav">
-                    <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
-                    <li><button onclick="location.href = './sobitiya.html'">События</button></li>
-                    <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
-                    <li><button onclick="location.href = './karta.html'">Карта</button></li>
-                </ul>
-            </nav>
-            <img class="person" src="images/person.png" alt="Вход" onclick="location.href = './login.html'">
-        </div>
-        <search>
-            <form action="/search">
-                <input id="search" autofocus autocomplete="off" type="text" placeholder="Найти правителя">
-            </form>
-        </search>
+        <img onclick="location.href = './index.html'" class="logo" src="images/logo.png" alt="РосИст - История Российской Империи">
+        <nav>
+            <button onclick="openMenu()" class="open__nav">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </button>
+            <div class="menu_body">
+                <menu class="mobile_menu">
+                    <ul class="top">
+                        <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
+                        <li><button onclick="location.href = './sobitiya.html'">События</button></li>
+                        <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
+                        <li><button onclick="location.href = './karta.html'">Карта</button></li>
+                    </ul>
+                    <ul class="bottom">
+                        <li><button onclick="location.href = './info.html'">О нас</button></li>
+                        <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
+                    </ul>
+                </menu>
+            </div>
+            
+            <ul class="nav">
+                <li><button onclick="location.href = './info.html'">О нас</button></li>
+                <li><button onclick="location.href = 'mailto:sergejberbasov1294@yandex.ru'">Связаться с нами</a></li>
+            </ul>
+            <ul class="nav">
+                <li><button onclick="location.href = './praviteli.html'">Правители</button></li>
+                <li><button onclick="location.href = './sobitiya.html'">События</button></li>
+                <li><button onclick="location.href = './simvolika.html'">Символика</button></li>
+                <li><button onclick="location.href = './karta.html'">Карта</button></li>
+            </ul>
+        </nav>
+        <img class="person" src="images/person.png" alt="Вход" onclick="location.href = './login.html'">
     </header>
 
+    <search>
+        <form action="/search">
+            <input id="search" autofocus autocomplete="off" type="text" placeholder="Найти правителя">
+        </form>
+    </search>
     <main>
         <ul class="emperors">
             <li class="emperor__block">
