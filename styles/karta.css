@@ -1,0 +1,14 @@
+.zoomable {
+    min-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+}
+.content {
+    margin: 15px; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+}

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/simvolika.css">
+    <link rel="stylesheet" href="styles/karta.css">
 
-    <title>РосИст - Символика</title>
+    <title>РосИст - Карта России</title>
 
     <script src="libs/zooming.min.js"></script>
     <script>
@@ -16,38 +16,15 @@
 
             const zoom = new Zooming({
                 bgColor: '#000000',
-                bgOpacity: 0.2,
-                enableGrab: false,
+                bgOpacity: 0.8,
+                enableGrab: true,
                 preloadImage: true,
-                scaleBase: 0.5
+                scaleBase: 1.0,
+                scaleExtra: 2
             });
             zoom.listen('.zoomable')
 
         })
-
-        function openMenu() {
-            document.querySelector('.menu_body').classList.add('active')
-            var btn = document.querySelector('.open__nav')
-            btn.classList.add('cross')
-            btn.onclick = function() { closeMenu() }
-        }
-        function closeMenu() {
-            document.querySelector('.menu_body').classList.remove('active')
-            var btn = document.querySelector('.open__nav')
-            btn.classList.remove('cross')
-            btn.onclick = function() { openMenu() }
-        }
-
-        function playAudio(btn) {
-            var file = document.getElementById('gimn')
-            file.play()
-            btn.onclick = function() {stopAudio(btn)}
-        }
-        function stopAudio(btn) {
-            var file = document.getElementById('gimn')
-            file.pause()
-            btn.onclick = function() {playAudio(btn)}
-        }
 
         function openMenu() {
             document.querySelector('.menu_body').classList.add('active')
@@ -101,29 +78,9 @@
     </header>
 
     <main>
-        <ul class="content">
-            <li>
-                <label for="bashnya">Спасская башня - символ Москвы</label>
-                <img class="zoomable" id="bashnya" src="images/bashnya.png" alt="Спасская башня">
-            </li>
-            <li>
-                <label for="clock">Ход курантов</label>
-                <video autoplay loop id="clock" src="videos/bashnya.mp4" alt="Часы на Спасской башне"></video>
-            </li>
-            <li>
-                <label for="flag">Флаг Российской империи</label>
-                <img class="zoomable" id="flag" src="images/flag.png" alt="Флаг">
-            </li>
-            <li>
-                <label for="gerb">Герб Российской империи</label>
-                <img class="zoomable" id="gerb" src="images/gerb.png" alt="Герб">
-            </li>
-            <li>
-                <label for="gimn">Гимн Российской империи</label>
-                <img class="audio" onclick="playAudio(this)" src="images/gimn.png" alt="Гимн Российской империи">
-                <audio id="gimn" src="audios/gimn.mp3"></audio>
-            </li>
-        </ul>
+        <div class="content">
+            <img class="zoomable" src="images/karta.png" alt="Карта Российской империи" style="width: 50%;">
+        </div>
     </main>
 
     <footer>
